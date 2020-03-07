@@ -1,0 +1,46 @@
+body {
+    margin: auto;
+    width: 80%;
+}
+
+/* Background while popup is open */
+.overlay {
+    display: none;
+    height: 2000px;
+    width: 2000px;
+    background-color: black;
+    opacity: 75%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 800;
+}
+
+/* Popup window */
+.popupwindow {
+    display: none;
+    height: fit-content;
+    width: 75%;
+    background-color: white;
+    z-index: 999;
+    position: fixed;
+    left: 12.5%;
+    top: 20%;
+}
+
+.popupwindow p {
+    margin: 50px auto;
+    width: 80%;
+}
+
+.fa-times {
+    font-size: 32px;
+    position: relative;
+    float: right;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.overlay.active, .popupwindow.active {
+    display: block;
+}
