@@ -3,6 +3,10 @@ body {
     width: 80%;
 }
 
+body.popupactive {
+ overflow: hidden;
+}
+
 /* Background while popup is open */
 .overlay {
     display: none;
@@ -17,7 +21,7 @@ body {
 }
 
 /* Popup window */
-.popupwindow {
+.p1, .p2 {
     display: none;
     height: fit-content;
     width: 75%;
@@ -28,19 +32,20 @@ body {
     top: 20%;
 }
 
-.popupwindow p {
+.p1 p, .p2 p {
     margin: 50px auto;
     width: 80%;
 }
 
+.overlay.active, .p1.active, .p2.active {
+    display: block;
+}
+
+/* The X to close popup */
 .fa-times {
     font-size: 32px;
     position: relative;
     float: right;
     margin: 10px;
     cursor: pointer;
-}
-
-.overlay.active, .popupwindow.active {
-    display: block;
 }
