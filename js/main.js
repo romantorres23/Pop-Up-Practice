@@ -12,11 +12,7 @@ class PopUp{
 
         // Event Listeners for the X icon to close popup
         for (let i = 0; i < this.x.length; i++) {
-            this.x[i].addEventListener("click", () => {
-                this.el.querySelector(".overlay").classList.remove("active");
-                this.el.querySelector(".active").classList.remove("active");
-                document.querySelector("body").classList.remove("popupactive");
-            });
+            this.close(this.x[i]);
         }
 
         // Closes popups on ESC keydown
@@ -33,15 +29,19 @@ class PopUp{
     }
 
     close(sel) {
-
+        sel.addEventListener("click", () => {
+            this.el.querySelector(".overlay").classList.remove("active");
+            this.el.querySelector(".active").classList.remove("active");
+            document.querySelector("body").classList.remove("popupactive");
+        });
     }
 
     // Function for ESC keydown event to close popup
     checkKeyPress(key) {  
         if (key.keyCode == "27") {
             document.querySelector(".overlay").classList.remove("active");
-            document.querySelector("body").classList.remove("popupactive");
             document.querySelector(".active").classList.remove("active");
+            document.querySelector("body").classList.remove("popupactive");
         }
     }
 }
