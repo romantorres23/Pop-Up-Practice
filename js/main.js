@@ -19,6 +19,7 @@ class PopUp{
         this.el.addEventListener("keydown", this.checkKeyPress, false);
     }
 
+    // Function to open popups
     open(sel) {
         sel.addEventListener("click", (e) => {
             e.preventDefault();
@@ -29,6 +30,7 @@ class PopUp{
         });
     }
 
+    // Function to close popups
     close(sel) {
         sel.addEventListener("click", () => {
             this.el.querySelector(".overlay").classList.remove("active");
