@@ -20,7 +20,8 @@ class PopUp{
     }
 
     open(sel) {
-        sel.addEventListener("click", () => {
+        sel.addEventListener("click", (e) => {
+            e.preventDefault();
             this.overlay.classList.add("active");
             this.el.querySelector("." + sel.id).classList.add("active");
             //locks scroll

@@ -1,23 +1,32 @@
 body {
     margin: auto;
     width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
 }
 
 body.popupactive {
  overflow: hidden;
 }
 
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(0, 77, 129);
+}
+
 /* Background while popup is open */
 .overlay {
+    position: fixed;
     display: none;
-    height: 2000px;
-    width: 2000px;
-    background-color: black;
-    opacity: 75%;
-    position: absolute;
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    z-index: 800;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 75%;
 }
 
 /* Popup window */
